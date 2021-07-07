@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+</head>
+<body>
+	<div class="container" style="padding: 30px;font-size: 1.5em;">
+		<a href="/crear" class="button">Crear registro</a>
+		<table class="table" style="width: 100%;">
+			<thead>
+				<tr>
+					<th>Rut</th>
+					<th>Nombre</th>
+					<th>WEB</th>
+					<th>Telefono</th>
+					<th>Direccion</th>
+					<th>Accion</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% resultados.forEach((usuario)=>{ %>
+				<tr>
+					<td><%= usuario.RUT %></td>
+					<td><%= usuario.nombre %></td>
+					<td><%= usuario.web %></td>
+					<td><%= usuario.telefono %></td>
+					<td><%= usuario.direccion %></td>
+					<td>
+						<a href="/editar/<%= usuario.RUT %>" class="button">Editar</a>
+						<a href="/borrar/<%= usuario.RUT %>" class="button error">Eliminar</a>
+					</td>
+				</tr>
+				<% }) %>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>

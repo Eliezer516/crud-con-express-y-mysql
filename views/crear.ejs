@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+</head>
+<body>
+	<div class="container">
+		<div class="card" style="padding: 30px; font-size: 1.5em; width: 50%;">
+			<form action="/guardar" method="POST">
+				<label>Nombre<input type="text" name="nombre"></label>
+				<label>Web<input type="text" name="web"></label>
+				<label>Telefono<input type="text" name="telefono"></label>
+				<label>Direccion<input type="text" name="direccion"></label>
+				<button type="submit">Agregar</button>
+				<a href="/" class="button error">Cancelar</a>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
